@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './TopBtn.css';
-
 export default function TopBtn() {
   const [showButton, setShowButton] = useState(false);  // 버튼 표시여부
-
   const scrollToTop = () => {
     window.scroll({
       top: 0,
@@ -18,14 +16,12 @@ export default function TopBtn() {
         setShowButton(false);
       }
     };
-
     console.log(window.scrollY);
     window.addEventListener('scroll', handleShowButton);
     return () => {
       window.removeEventListener('scroll', handleShowButton);
     };
   }, []);
-
   return (
     showButton && (
       <div className='scroll-container'>
@@ -33,19 +29,7 @@ export default function TopBtn() {
           {' '}
           Top
         </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< Updated upstream
       </div> 
-=======
-      </div>
->>>>>>> Stashed changes
-=======
-      </div>
->>>>>>> parent of 2bad43b (TopBtn 수정)
-=======
-      </div>
->>>>>>> parent of fe83bc2 (Merge pull request #83 from whiteNib/결제페이지-kkm)
     )
   );
 }
