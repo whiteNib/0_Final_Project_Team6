@@ -33,7 +33,11 @@ export default function TopBtn() {
           {' '}
           Top
         </button>
+<<<<<<< Updated upstream
       </div> 
+=======
+      </div>
+>>>>>>> Stashed changes
     )
   );
 }

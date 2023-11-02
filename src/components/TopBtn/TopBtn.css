@@ -2,7 +2,11 @@
   position: fixed;
   right: 5%;
   bottom: 5%;
+<<<<<<< Updated upstream
   z-index: 100; 	 /* 제일 위로 */
+=======
+  z-index: 100; 	/* 제일 위로 */
+>>>>>>> Stashed changes
 }
 
 .topBtn{
