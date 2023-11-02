@@ -39,6 +39,7 @@ function Footer() {
 					</div>
 					</div>
 
+
 					<hr></hr>
 
 					<div className='footer-below'>
@@ -54,7 +55,6 @@ function Footer() {
 							</div>
 						</div>
 					</div>
-
 
     </footer>
   );
