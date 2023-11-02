@@ -34,6 +34,7 @@ export default function TopBtn() {
           Top
         </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       </div> 
 =======
@@ -42,6 +43,9 @@ export default function TopBtn() {
 =======
       </div>
 >>>>>>> parent of 2bad43b (TopBtn 수정)
+=======
+      </div>
+>>>>>>> parent of fe83bc2 (Merge pull request #83 from whiteNib/결제페이지-kkm)
     )
   );
 }
