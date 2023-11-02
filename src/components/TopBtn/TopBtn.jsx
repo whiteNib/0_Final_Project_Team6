@@ -33,11 +33,15 @@ export default function TopBtn() {
           {' '}
           Top
         </button>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
       </div> 
 =======
       </div>
 >>>>>>> Stashed changes
+=======
+      </div>
+>>>>>>> parent of 2bad43b (TopBtn 수정)
     )
   );
 }
