@@ -1,11 +1,10 @@
-# :running:  W & W : Who Want? We Want!
+# :running:  WW : Who Want? We Want!
 <p align="center"><img src="https://0-final-project-team6-w6x1.vercel.app/img/logo.png" width="300px" alt="logo"></p>
-
 
 ## :computer: 프로젝트 소개
 > <b>크라우드펀딩 기반의 Social Activity & Learning 서비스</b> <br/>
 > * 취미활동을 위한 지역 내 소규모 동호회 및 강연, 세미나 등을 위한 펀딩 서비스 <br/>
-> * [프로젝트 기획안(상세)](https://docs.google.com/document/d/1hKm3yDNvOUSQlNiDP4_LFtK6DD8z4g40/edit "프로젝트기획안")
+> * 프로젝트 기획안 : [PPTX](https://docs.google.com/presentation/d/1liaOinHjDXMTQLIPyRAjowixjl3nFqzA/edit#slide=id.p1 "프로젝트기획안") | [DOCX](https://docs.google.com/document/d/1AEMmD6MUbtEU5x0BQSoyjueNZ6Bx6gmt/edit#heading=h.gjdgxs "프로젝트기획안")
  <br/>
 
 ## :point_right: 배포 주소
@@ -18,8 +17,8 @@
 > 개발기간 : 2023. 10. 4. ~ 11. 9.
 <br/>
 
-구채현 | 권경민 | [박지애](https://github.com/jiiiiiaiiiii, "박지애") | 안성민 | 이서준 | 조원혁 
------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
+구채현 | [권경민](https://github.com/whiteNib "권경민") | [박지애](https://github.com/jiiiiiaiiiii "박지애") | 안성민 | 이서준 | [조원혁](https://github.com/wkjproject "조원혁") 
+:------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: 
 <img src="https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/b52d009a-f37c-4ed5-8e05-a31f143a8d60" width="600px"> | <img src="https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/8773e7ee-b1fa-4134-9ee8-255b214ff8f7" width="600px"> | <img src="https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/ad7d0791-63cb-4c23-9a5a-efb6a6163390" width="600px"> |![안성민](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/1a6899c8-0cf6-44e1-8e77-851c9b891852) | ![이서준](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/9da29dca-6621-4d3f-8342-7b586fba7dfd) | ![조원혁](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/e8ccda31-7186-4889-9c7f-55c96945af6c)
 Front + UI/UX | Front + Server | Front + 조장 | Front + Server | 기획 + 문서 | Front + DB
 <br/>
