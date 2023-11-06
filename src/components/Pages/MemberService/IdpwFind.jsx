@@ -4,10 +4,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../../../css/MemberService/IdpwFind.css'
 import Endpoint from '../../../config/Endpoint';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function IdpwFind() {
 	const endpoint = Endpoint();
 	const navigate = useNavigate();
+	const [inputValue, setInputValue] = useState('');
 	// 인증번호 받기 버튼 상태 관리(인증코드 받으면 3분동안 재발송 불가)
 	const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [countdown, setCountdown] = useState(180); // 3분(180초)
@@ -63,27 +66,28 @@ export default function IdpwFind() {
 	// 비밀번호 찾기에서 인증번호 받기 부분
 	const verifiCodeMailSend = async (evt) => {
 		evt.preventDefault();
+		setIsButtonDisabled(true);
+		const interval = setInterval(() => {
+			setCountdown((prevCountdown) => {
+				if (prevCountdown <= 0) {
+					clearInterval(interval); // countdown이 0 이하가 되면 타이머 종료
+					setIsButtonDisabled(false); // 버튼 다시 활성화
+					return 0;
+				}
+				return prevCountdown - 1;
+			});
+		}, 1000); // 1초(1000 밀리초)
 		const userMail = userMailRef.current.value;
 		await axios.post(`${endpoint}/pwCodeMailSend`, {
 		userMail
 		}).then((res) => {
 			if(res.data.sendMailSuccess){
-				setIsButtonDisabled(true);
-				alert('인증번호 발송 성공')
+				
+				toast('인증번호 발송 성공')
 				// 1초마다 countdown 값을 감소
-				const interval = setInterval(() => {
-					setCountdown((prevCountdown) => {
-						if (prevCountdown <= 0) {
-							clearInterval(interval); // countdown이 0 이하가 되면 타이머 종료
-							setIsButtonDisabled(false); // 버튼 다시 활성화
-							return 0;
-						}
-						return prevCountdown - 1;
-					});
-				}, 1000); // 1초(1000 밀리초)
 			}
 			if(!res.data.sendMailSuccess){
-				alert(res.data.message);
+				toast(res.data.message);
 			}
 		})
 	}
@@ -93,6 +97,9 @@ export default function IdpwFind() {
 		evt.preventDefault();
 		const userMail = userMailRef.current.value;
 		const verifiCode = verifiCodeRef.current.value;
+		if(verifiCode.length !== 6){
+			toast('인증번호를 확인해주세요.')
+		}
 		await axios.post(`${endpoint}/verifiCode`, {
 			userMail,
 			verifiCode
@@ -100,7 +107,10 @@ export default function IdpwFind() {
 			if(res.data.verificationSuccess){
 				setVerifiConfirmState(true);
 				setUserMailSave(userMail);
-				alert(res.data.message);
+				toast(res.data.message);
+			}
+			if(!res.data.verificationSuccess){
+				toast(res.data.message);
 			}
 		})
 	}
@@ -112,7 +122,7 @@ export default function IdpwFind() {
 		const userPassword = userPasswordRef.current.value;
 		const userPasswordCheck = userPasswordCheckRef.current.value;
 		if (userPassword !== userPasswordCheck) {
-			alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
+			toast('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
 			return;
 		}
 		await axios.post(`${endpoint}/newPassword`, {
@@ -120,12 +130,12 @@ export default function IdpwFind() {
 			userPassword
 		}).then((res) => {
 			if(res.data.newPasswordSuccess){
-				alert(res.data.message)
+				toast(res.data.message)
 				navigate('/IdpwFind')
 				window.location.reload();
 			}
 			if(!res.data.newPasswordSuccess){
-				alert(res.data.message)
+				toast(res.data.message)
 			}
 		})
 	}
@@ -205,7 +215,7 @@ export default function IdpwFind() {
 				</div>
 				<br/>
 				<br/>
-				<input className='IdpwFindInputInDiv' type='text' ref={verifiCodeRef} placeholder='인증번호 입력' style={{marginBottom:'30px'}}></input>
+				<input className='IdpwFindInputInDiv' type='text' ref={verifiCodeRef} placeholder='인증번호 입력' style={{marginBottom:'30px'}} maxLength={6}></input>
 				<button className='IdpwFindButtonInDiv' onClick={verifiConfirm}>비밀번호 재설정</button>
 				</div>
 				</>)

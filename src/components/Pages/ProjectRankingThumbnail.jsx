@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ProjectRankingThumbnail(props) {
   const navigate = useNavigate();
@@ -17,13 +19,15 @@ export default function ProjectRankingThumbnail(props) {
         ? props.isAdmin === true || props.userId === props.maderId
           ? navigate('/comingProj', { state: { _id: props.projId } })
           : alert('오픈예정 프로젝트입니다.')
-        : navigate('/project2', { state: { _id: props.projId } }); // 진행중 --> 상세페이지로
+        : // : navigate('/project2', { state: { _id: props.projId } }); // 진행중 --> 상세페이지로
+          navigate(`/project2/${props.projId}`);
     } else if (props.projStatus === '2') {
       // 마감된(2) --> 프로젝트 상세페이지로
-      navigate('/project2', { state: { _id: props.projId } });
+      // navigate('/project2', { state: { _id: props.projId } });
+      navigate(`/project2/${props.projId}`);
     } else if (props.projStatus === '3') {
       // 거절된(3) --> 경고창
-      alert('승인거절된 프로젝트입니다.');
+      toast('승인거절된 프로젝트입니다.');
     }
   };
 
@@ -49,6 +53,10 @@ export default function ProjectRankingThumbnail(props) {
             ? 'fundingProjectTextWait'
             : props.MypageDivClass === 'fundingProjectTextConfirm'
             ? 'fundingProjectTextConfirm'
+            : props.MypageDivClass === 'fundingProjectRefuse'
+            ? 'fundingProjectRefuse'
+            : props.MypageDivClass === 'fundingProjectClosed'
+            ? 'fundingProjectClosed'
             : ''
         }
       >
