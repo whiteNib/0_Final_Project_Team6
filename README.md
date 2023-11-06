@@ -56,29 +56,19 @@ Front + UI/UX | Front + Server | Front + 조장 | Front + Server | 기획 + 문�
 <br/>
 
 ## :tv: 화면구성
-시현영상: 링크 추가
+* [프로젝트 시연영상](https://www.youtube.com/watch?v=dR1xooSlbNA "프로젝트 시연영상")
 
-*Landing | *HOME
------------- | ------------- 
-img | img 
-Main Page | 슬라이더: Slick <br/> 실시간 랭킹, 화면 클릭하면 썸네일 이동
-*프로젝트 등록&수정 | *프로젝트 상세
-img | img 
-설명 | 설명
-*프로젝트 결제 | *회원가입&로그인
-img | img 
-설명 | 설명
-*ID/PW 찾기 | *마이페이지
-img | img 
-설명 | 설명
-*회원정보 수정 | *회원관리
-img | img 
-설명 | 설명
-*프로젝트 관리 | *프로젝트 승인
-img | img 
-설명 | 설명
 
-<br/>
-
-## :cd: 주요기능
-
+ Landing | HOME
+ :-:|:-:
+![1 landing](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/a3a29de1-2175-44b2-9a66-06af81cdcb73) | ![2 home](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/bbd69c37-8a97-4a1b-81e6-90173d3fb9d8) 
+<b>프로젝트 등록&수정</b> | <b>프로젝트 상세</b>
+![3 project](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/5d456e9b-7948-4571-841a-d0013855e1a0) | ![4 detail](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/56b578f3-aa85-466d-8dc3-d681343b7671) 
+<b>펀딩 현황</b> | <b>프로젝트 결제</b>
+![5 funding](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/6fdeb35b-d362-412b-b73f-6e7ab6153c35) | ![6 pay](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/1152cde5-421e-4928-82d1-8b33f80dc663) 
+<b>회원가입&로그인</b> | <b>ID/PW 찾기</b>
+![7 signup](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/676ecc02-63bb-40cc-b721-e276615840d2) | ![8 idpw](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/8654fd8d-770f-47ce-84cb-4c6eee2b1743) 
+<b>마이페이지</b> | <b>회원관리</b>
+![9 mypage](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/ecf513a0-2bab-4603-8ad8-b63ea22be495) | ![10 users](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/229e02ed-cd9f-4e66-8acf-8cfe333e4175) 
+<b>프로젝트 관리</b> | <b>프로젝트 승인</b>
+![11 admin](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/291201ac-90b9-405e-83a3-050e36c51cf0) | ![12 approve](https://github.com/whiteNib/0_Final_Project_Team6/assets/93249652/64137713-afea-445e-8789-1f951e559ab4) 
